@@ -1,0 +1,21 @@
+# خطة تطوير صفحة طلباتي مع شريط بحث
+
+## الحالة: ✅ مكتملة
+
+### 1. index.html (شاشة ordersScreen) — ✅
+- شريط بحث `ordersSearchInput` + زر مسح `ordersClearSearch`
+- أزرار تصفية الحالة `ordersFilterButtons` (الكل / قيد الانتظار / تم التأكيد / تم التجهيز / في الطريق / تم التوصيل / ملغي)
+- رسالة "لا توجد طلبات مطابقة" عند عدم وجود نتائج
+
+### 2. js/cart.js — ✅
+- `filterBuyerOrders()` — بحث برقم الطلب أو اسم المنتج
+- `setOrdersFilter(status, btn)` — تصفية حسب الحالة
+- `renderFilteredOrders()` — عرض الطلبات المفلترة
+- `loadBuyerOrdersWithTimeline()` — تستدعي `renderFilteredOrders()` لتطبيق التصفية الحالية
+- الدوال مُصدّرة عبر `window`
+
+### 3. style.css — ✅ (أُضيف مؤخراً)
+- تنسيقات `.orders-search-bar`: خلفية بيضاء لحقل البحث، حدود ذهبية، أزرار تصفية دائرية بحدود ذهبية
+- حالة النشاط للزر: خلفية كحلية (`--blue-royal`) ونص ذهبي
+- تحسينات للموبايل (`max-width: 480px`)
+
